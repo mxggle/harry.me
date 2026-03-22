@@ -63,7 +63,7 @@ const hasCoverInFolder = coverImage
   : false;
 ---
 
-<Layout title={`${title} | Galerías | ${SITE.title}`} description={description}>
+<Layout title={`${title} | Galleries | ${SITE.title}`} description={description}>
   <Header />
   <Breadcrumb />
   <main id="main-content" class="app-layout pb-16">
@@ -89,7 +89,7 @@ const hasCoverInFolder = coverImage
       }
       <p class="mt-4 text-sm text-foreground/50">
         {images.length}
-        {images.length === 1 ? "imagen" : "imágenes"}
+        {images.length === 1 ? "image" : "images"}
       </p>
     </header>
 
@@ -116,7 +116,7 @@ const hasCoverInFolder = coverImage
           class="gallery-grid mt-6"
           id="gallery-grid"
           role="list"
-          aria-label={`Imágenes de ${title}`}
+          aria-label={`Images of ${title}`}
         >
           {images.map((img, idx) => (
             <li>
@@ -143,7 +143,7 @@ const hasCoverInFolder = coverImage
         </ul>
       ) : (
         <p class="mt-12 text-center text-foreground/50 italic">
-          Esta galería todavía no tiene imágenes.
+          This gallery has no images yet.
         </p>
       )
     }

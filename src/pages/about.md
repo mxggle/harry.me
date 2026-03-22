@@ -3,28 +3,49 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-Bienvenido a mi rincón digital. Soy un **desarrollador** y **estudiante** apasionado por la tecnología, los videojuegos y construir cosas que vivan en internet.
+import { Image } from "astro:assets";
+import kaisenApp from "@/assets/images/about/kaisen-app.png";
+import loopmateImg from "@/assets/images/about/CleanShot-2025-10-05-at-13.43.58@2x.png";
+import grammarBuddyImg from "@/assets/images/about/CleanShot-2025-10-05-at-13.41.54-2@2x-1.png";
+import n2DeckImg from "@/assets/images/about/cleanshot-2025-11-01-at-164750@2x.png";
+import n1DeckImg from "@/assets/images/about/cleanshot-2025-12-28-at-095638@2x.png";
 
-## ¿Quién soy?
+## About Me
 
-Me llamo Andrés, y desde que recuerdo siempre tuve curiosidad por entender cómo funcionan las cosas — desde desarmar juguetes de niño hasta desarmar código ajeno a las 2 AM. Actualmente estudio ingeniería mientras desarrollo proyectos que me retan a aprender algo nuevo cada día.
+I'm Harry — a full-stack developer, language learner, and quiet observer of the world around me. Over the past seven years, I've worked across front-end and full-stack development, building tools, web apps, and AI-driven experiences that make learning and creativity feel more human.
 
-Cuando no estoy programando, probablemente estoy en algún mundo virtual explorando mapas, completando misiones o compitiendo online. Los videojuegos no solo son mi hobby, también me enseñaron a resolver problemas, trabajar en equipo y, sobre todo, a no rendirme después del intento #847.
+I have a deep passion for artificial intelligence — not just as technology, but as a way of thinking. I love exploring how AI can amplify creativity, simplify learning, and quietly weave itself into everyday life. From coding to language study, I often use AI as both a collaborator and a mirror for thought — a partner that helps me see ideas from new angles.
 
-## Lo que hago
+**Interests:** coding, languages, photography, coffee brewing, quiet streets, fitness
 
-- **Desarrollo web** — Me encanta construir experiencias web modernas con tecnologías como Astro, React, TypeScript y todo lo que el ecosistema JavaScript tiene para ofrecer.
-- **Open Source** — Creo en el poder del código abierto. Puedes encontrar mis proyectos en [GitHub](https://github.com/0xdres/).
-- **Aprendizaje continuo** — Siempre estoy explorando nuevas herramientas, frameworks y conceptos. La tecnología evoluciona rápido y me gusta ir al ritmo.
+**Location:** Originally from China, I now live in Tokyo.
 
-## Gaming
+This website is my digital treehouse — a place to store thoughts, share experiments, and let both ideas and algorithms grow slowly, branch by branch.
 
-Los videojuegos son parte de mi ADN. Desde RPGs épicos hasta shooters competitivos, disfruto prácticamente cualquier género. Es ese espacio donde la creatividad se encuentra con la estrategia y la diversión pura.
+## My Projects
 
-## Este blog
+### [Kanji Kaisen](https://kanji-kaisen.harrysui.me)
 
-**Devosfera** nació como un espacio para documentar mi viaje como desarrollador, compartir lo que aprendo y conectar con personas que comparten las mismas pasiones. Aquí encontrarás posts sobre desarrollo, tecnología, y alguna que otra reflexión random de madrugada.
+<Image src={kaisenApp} alt="Kanji Kaisen app screenshot" />
 
-Si quieres conectar, no dudes en encontrarme en [GitHub](https://github.com/0xdres/), [X](https://x.com/avdyen) o [LinkedIn](https://www.linkedin.com/in/avdyan/). Siempre es bueno conocer gente cool de la comunidad.
+**Kanji Kaisen** is a gamified, interactive platform designed to make learning Japanese Kanji engaging and effective. Inspired by the intensity of battle, it combines spaced repetition with AI-powered stroke recognition to help you master characters through elemental mastery.
 
-> _"El código es poesía, pero con más puntos y comas."_ — Yo, probablemente
+### [LoopMate](https://loopmate.harrysui.me/)
+
+<Image src={loopmateImg} alt="LoopMate app screenshot" />
+
+Loop, listen, and repeat. Use precision A-B points and our dedicated Shadowing Feature to bridge the gap between hearing and doing. The ultimate web app for mastering languages, riffs, and dialogue.
+
+### [Grammar Buddy](https://japanese-grammar-anki.harrysui.me/)
+
+<Image src={grammarBuddyImg} alt="Grammar Buddy app screenshot" />
+
+A modern, full-stack web application for studying Japanese N2 grammar patterns using spaced repetition algorithms, built with Next.js, TypeScript, and Tailwind CSS.
+
+### JLPT N2 Grammar Anki Deck
+
+<Image src={n2DeckImg} alt="JLPT N2 Grammar Anki Deck screenshot" />
+
+### [JLPT N1 Grammar Anki Deck](https://ankiweb.net/shared/info/925682506)
+
+<Image src={n1DeckImg} alt="JLPT N1 Grammar Anki Deck screenshot" />
