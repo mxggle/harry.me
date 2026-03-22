@@ -4,6 +4,7 @@ pubDatetime: 2025-09-05T00:00:00Z
 description: "A close reading of Japanese N2-level text from a My Number Card notification, with grammar breakdowns and vocabulary."
 tags: ["japanese", "language"]
 ogImage: "./images/b771670d1506b589cbb6c5338b284c52.jpg"
+slug: 日语精读：マイナンバーカード（個人番号カード
 draft: false
 featured: false
 ---

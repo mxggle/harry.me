@@ -4,6 +4,7 @@ pubDatetime: 2026-01-14T00:00:00Z
 description: "Building Kanji Kaisen, a web app that teaches kanji through radicals, turning overwhelming symbols into a learnable logical system."
 tags: ["japanese", "language"]
 ogImage: "./images/kanji-cover-scaled-e1769598476274.png"
+slug: im-building-an-app-that-turns-random-kanji-into-a-logical-system-based-on-radicals
 draft: false
 featured: false
 ---

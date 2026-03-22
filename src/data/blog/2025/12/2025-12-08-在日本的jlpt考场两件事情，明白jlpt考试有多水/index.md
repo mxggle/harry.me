@@ -4,6 +4,7 @@ pubDatetime: 2025-12-08T00:00:00Z
 description: "Two observations from taking the JLPT exam in Japan that reveal how the test underestimates real conversational ability."
 tags: ["japanese", "language"]
 ogImage: "./images/download.webp"
+slug: 在日本的jlpt考场两件事情，明白jlpt考试有多水
 draft: false
 featured: false
 ---

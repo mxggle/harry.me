@@ -4,6 +4,7 @@ pubDatetime: 2025-10-13T00:00:00Z
 description: "How I designed a universal AI prompt to explain Japanese grammar from first principles, using わけではない as a test case."
 tags: ["japanese", "language", "ai"]
 ogImage: "./images/philosopher-in-meditation-1632large.jpg"
+slug: how-i-built-the-perfect-prompt-to-explain-japanese-grammar-from-first-principles
 draft: false
 featured: false
 ---

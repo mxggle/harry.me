@@ -4,6 +4,7 @@ pubDatetime: 2025-10-16T00:00:00Z
 description: "Using AI prompts personalized to your hobbies to create memorable Japanese example sentences that actually stick."
 tags: ["japanese", "ai", "language"]
 ogImage: "./images/cleanshot-2025-10-15-at-233000@2x.png"
+slug: the-ai-prompt-that-lets-your-hobbies-remember-japanese-for-you
 draft: false
 featured: false
 ---

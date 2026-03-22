@@ -4,6 +4,7 @@ pubDatetime: 2025-12-12T00:00:00Z
 description: "A programmer's reflection on how vibecoding and AI have lowered the barriers to coding, and what that means for developers."
 tags: ["ai", "thoughts"]
 ogImage: "./images/ChatGPT-Image-Sep-9-2025-07_40_02-PM.png"
+slug: 编程已成大白话：一个程序员的ai时代反思
 draft: false
 featured: false
 ---

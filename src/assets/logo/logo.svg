@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" xmlns:bx="https://boxy-svg.com">
+  <g transform="translate(500, 165)" text-anchor="middle" style="font-family: var(--font-cascadia-code), 'Cascadia Code', monospace; font-size: 130px; font-weight: 700;">
+    <text class="logo-text-left" fill="var(--foreground)" x="-220">Dev</text>
+    <text class="logo-sphere" fill="var(--accent)" x="0">{☕}</text>
+    <text class="logo-text-right" fill="var(--foreground)" x="300">Harry</text>
+  </g>
+</svg>

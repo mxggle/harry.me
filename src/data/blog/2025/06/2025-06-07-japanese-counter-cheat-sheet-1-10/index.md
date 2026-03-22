@@ -4,6 +4,7 @@ pubDatetime: 2025-06-07T00:00:00Z
 description: "A comprehensive guide to Japanese counter word sound changes for numbers 1–10, with exhaustive examples and rules."
 tags: ["japanese", "language"]
 ogImage: "./images/japanese-umbrellas-umbrella-japanese-style-k-39079-39079-scaled.jpg"
+slug: japanese-counter-cheat-sheet-1-10
 draft: false
 featured: false
 ---

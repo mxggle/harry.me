@@ -4,6 +4,7 @@ pubDatetime: 2025-10-05T00:00:00Z
 description: "Reflections on Sora 2, vibecoding, and how AI is shifting creative power from rights to cognition."
 tags: ["ai", "thoughts"]
 ogImage: "./images/2533242_orig.jpg"
+slug: sora-2-vibecoding-与创作的去中心化-从权利到认知的范式
 draft: false
 featured: false
 ---

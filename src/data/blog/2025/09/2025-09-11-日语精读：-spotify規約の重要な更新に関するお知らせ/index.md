@@ -4,6 +4,7 @@ pubDatetime: 2025-09-11T00:00:00Z
 description: "A close reading of a Spotify terms of service update notice in Japanese, targeting JLPT N3–N2 learners."
 tags: ["japanese", "language"]
 ogImage: "./images/CleanShot-2025-09-08-at-21.53.53@2x.png"
+slug: 日语精読：spotify規約の重要な更新に関するお知らせ
 draft: false
 featured: false
 ---

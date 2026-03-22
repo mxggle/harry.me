@@ -9,7 +9,7 @@ import ShareLinks from "@/components/ShareLinks.astro";
 import BackButton from "@/components/BackButton.astro";
 import BackToTopButton from "@/components/BackToTopButton.astro";
 import GalleryEmbed from "@/components/GalleryEmbed.astro";
-import { getPath } from "@/utils/getPath";
+import { getPostPath } from "@/utils/getPath";
 import { slugifyStr } from "@/utils/slugify";
 import { SITE } from "@/config";
 
@@ -46,7 +46,7 @@ if (typeof initOgImage === "string") {
 
 // Use dynamic OG image if enabled and no remote|local ogImage
 if (!ogImageUrl && SITE.dynamicOgImage) {
-  ogImageUrl = `${getPath(post.id, post.filePath)}/index.png`;
+  ogImageUrl = `${getPostPath(post)}/index.png`;
 }
 
 // Resolve OG image URL (or fallback to SITE.ogImage / default `og.png`)
@@ -67,10 +67,11 @@ const layoutProps = {
 
 /* ========== Prev/Next Posts ========== */
 
-const allPosts = posts.map(({ data: { title }, id, filePath }) => ({
+const allPosts = posts.map(({ data: { title, slug }, id, filePath }) => ({
   id,
   title,
   filePath,
+  data: { slug },
 }));
 
 const currentPostIndex = allPosts.findIndex(a => a.id === post.id);
@@ -239,7 +240,7 @@ const nextPost =
       {
         prevPost ? (
           <a
-            href={getPath(prevPost.id, prevPost.filePath)}
+            href={getPostPath(prevPost)}
             class="post-nav-link group relative flex flex-col gap-1 rounded-2xl border border-border/20 px-5 py-4 transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
           >
             <div class="post-nav-bg" />
@@ -271,7 +272,7 @@ const nextPost =
       {
         nextPost && (
           <a
-            href={getPath(nextPost.id, nextPost.filePath)}
+            href={getPostPath(nextPost)}
             class="post-nav-link group relative col-start-2 flex flex-col items-end gap-1 rounded-2xl border border-border/20 px-5 py-4 text-end transition-all duration-300 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5"
           >
             <div class="post-nav-bg" />

@@ -4,6 +4,7 @@ pubDatetime: 2025-06-07T00:00:00Z
 description: "Back workout exercises with names in Chinese, Japanese, and English — a trilingual gym reference guide."
 tags: ["japanese", "fitness"]
 ogImage: "./images/back-workout-1.png"
+slug: 中日英三语健身房：练背篇
 draft: false
 featured: false
 ---

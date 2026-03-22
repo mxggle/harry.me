@@ -4,6 +4,7 @@ pubDatetime: 2026-02-12T00:00:00Z
 description: "Reflections on a podcast episode about vibe coding, high-fidelity prompting, and what it means to communicate clearly with AI."
 tags: ["ai", "thoughts"]
 ogImage: "./images/ai-reflection-on-bug.jpg"
+slug: notes-after-a-podcast-trust-the-machine-understand-the-human
 draft: false
 featured: false
 ---

@@ -4,6 +4,7 @@ pubDatetime: 2026-02-16T00:00:00Z
 description: "Reflections on spending Chinese New Year's Eve in Tokyo for the first time — on cultural memory, tradition, and the passage of time."
 tags: ["thoughts"]
 ogImage: "./images/r-y-wM-_33i3btI-unsplash-scaled.jpg"
+slug: 年，是记忆的刻度-记录我在国外过的第一个除夕
 draft: false
 featured: false
 ---

@@ -4,6 +4,7 @@ pubDatetime: 2025-08-05T00:00:00Z
 description: "A prompt-based method for Chinese speakers to leverage kanji knowledge for memorizing Japanese vocabulary efficiently."
 tags: ["japanese", "ai", "language"]
 ogImage: "./images/1636097245-2021-11-05_131532.jpg"
+slug: japanese-kanji-same-reading
 draft: false
 featured: false
 ---

@@ -4,6 +4,7 @@ pubDatetime: 2025-06-01T00:00:00Z
 description: "Leg workout exercises with names in Chinese, Japanese, and English — a trilingual gym reference guide."
 tags: ["japanese", "fitness"]
 ogImage: "./images/leg-workout-3.png"
+slug: 中日英三语健身房：练腿篇
 draft: false
 featured: false
 ---

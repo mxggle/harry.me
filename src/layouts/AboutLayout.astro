@@ -419,4 +419,56 @@ const { frontmatter } = Astro.props;
     border-radius: 999px;
     box-shadow: 0 0 8px color-mix(in srgb, var(--color-accent) 30%, transparent);
   }
+
+  /* Projects Gallery Grid */
+  .about-content :global(.projects-grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-content :global(.project-card) {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--color-foreground) 3%, var(--color-background));
+    border: 1px solid color-mix(in srgb, var(--color-accent) 12%, transparent);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .about-content :global(.project-card:hover) {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px color-mix(in srgb, var(--color-accent) 15%, transparent);
+  }
+
+  .about-content :global(.project-card img) {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-accent) 10%, transparent);
+  }
+
+  .about-content :global(.project-card h3) {
+    margin: 0;
+    padding: 0.75rem 1rem 0.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .about-content :global(.project-card h3 a) {
+    color: var(--color-foreground);
+    text-decoration: none;
+  }
+
+  .about-content :global(.project-card h3 a:hover) {
+    color: var(--color-accent);
+  }
+
+  .about-content :global(.project-card p) {
+    margin: 0;
+    padding: 0 1rem 1rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    line-height: 1.4;
+  }
 </style>

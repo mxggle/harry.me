@@ -4,6 +4,7 @@ pubDatetime: 2025-05-04T00:00:00Z
 description: "Shoulder workout exercises with names in Chinese, Japanese, and English — a trilingual gym reference guide."
 tags: ["japanese", "fitness"]
 ogImage: "./images/4.webp"
+slug: 中日英三语健身房：练肩篇
 draft: false
 featured: false
 ---

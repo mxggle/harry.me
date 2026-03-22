@@ -1,5 +1,6 @@
 import satori from "satori";
 import { SITE } from "@/config";
+import { THEME } from "@/config/theme";
 import loadGoogleFonts from "../loadGoogleFont";
 
 export default async () => {
@@ -17,15 +18,14 @@ export default async () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#0f172a", // Dark background (Slate 900)
-          backgroundImage:
-            "radial-gradient(circle at 25px 25px, #1e293b 2%, transparent 0%), radial-gradient(circle at 75px 75px, #1e293b 2%, transparent 0%)", // Subtle dot pattern (optional, remove if you don't like it)
+          backgroundColor: THEME.dark.background,
+          backgroundImage: `radial-gradient(circle at 25px 25px, ${THEME.dark.border} 2%, transparent 0%), radial-gradient(circle at 75px 75px, ${THEME.dark.border} 2%, transparent 0%)`,
           backgroundSize: "100px 100px",
-          color: "white",
+          color: THEME.dark.foreground,
           position: "relative",
         },
         children: [
-          // 1. Top Right Decorative Gradient (Purple)
+          // 1. Decorative Gradient (Rust)
           {
             type: "div",
             props: {
@@ -35,32 +35,15 @@ export default async () => {
                 right: "-50px",
                 width: "600px",
                 height: "600px",
-                background: "linear-gradient(140deg, #a855f7, #ec4899)", // Purple to Pink
+                background: `linear-gradient(140deg, ${THEME.dark.accent}, ${THEME.dark.muted})`,
                 filter: "blur(120px)",
-                opacity: 0.3,
-                borderRadius: "100%",
-              },
-            },
-          },
-          // 2. Bottom Left Decorative Gradient (Indigo)
-          {
-            type: "div",
-            props: {
-              style: {
-                position: "absolute",
-                bottom: "-150px",
-                left: "-50px",
-                width: "500px",
-                height: "500px",
-                background: "linear-gradient(140deg, #3b82f6, #6366f1)", // Blue to Indigo
-                filter: "blur(120px)",
-                opacity: 0.3,
+                opacity: 0.15,
                 borderRadius: "100%",
               },
             },
           },
 
-          // 3. Center Container
+          // 2. Center Container
           {
             type: "div",
             props: {
@@ -74,45 +57,68 @@ export default async () => {
                 width: "90%",
               },
               children: [
-                // Site Title (HERO)
+                // Site Logo / Title
                 {
-                  type: "h1",
+                  type: "div",
                   props: {
                     style: {
-                      fontSize: 100, // Very large
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: 100,
                       fontWeight: 900,
                       letterSpacing: "-2px",
-                      color: "white",
                       margin: "0 0 20px 0",
                       lineHeight: 1,
-                      textShadow: "0 4px 20px rgba(0,0,0,0.5)",
                     },
-                    children: SITE.title,
+                    children: [
+                      {
+                        type: "span",
+                        props: {
+                          style: { color: THEME.dark.foreground },
+                          children: "Harry",
+                        },
+                      },
+                      {
+                        type: "span",
+                        props: {
+                          style: { color: THEME.dark.accent, margin: "0 20px" },
+                          children: "{☕}",
+                        },
+                      },
+                      {
+                        type: "span",
+                        props: {
+                          style: { color: THEME.dark.foreground },
+                          children: "blog",
+                        },
+                      },
+                    ],
                   },
                 },
 
-                // Small separator line
+                // Separator line
                 {
                   type: "div",
                   props: {
                     style: {
                       width: "80px",
-                      height: "6px",
-                      backgroundColor: "#818cf8", // Indigo accent
-                      borderRadius: "4px",
+                      height: "4px",
+                      backgroundColor: THEME.dark.accent,
+                      borderRadius: "2px",
                       marginBottom: "30px",
                     },
                   },
                 },
 
-                // Site description
+                // Description
                 {
                   type: "p",
                   props: {
                     style: {
                       fontSize: 36,
-                      color: "#cbd5e1", // Slate 300 (light gray)
-                      maxWidth: "80%", // Prevent stretching too wide
+                      color: THEME.light.muted, // Mid-Gray
+                      maxWidth: "80%",
                       margin: 0,
                       lineHeight: 1.4,
                       fontWeight: 400,
@@ -124,7 +130,7 @@ export default async () => {
             },
           },
 
-          // 4. Footer: URL del sitio (Pill design)
+          // 3. Footer
           {
             type: "div",
             props: {
@@ -133,9 +139,8 @@ export default async () => {
                 bottom: "50px",
                 display: "flex",
                 alignItems: "center",
-                justifyContent: "center",
-                backgroundColor: "rgba(255, 255, 255, 0.05)",
-                border: "1px solid rgba(255, 255, 255, 0.1)",
+                backgroundColor: `${THEME.dark.foreground}0D`,
+                border: `1px solid ${THEME.dark.foreground}1A`,
                 padding: "12px 30px",
                 borderRadius: "100px",
               },
@@ -144,7 +149,7 @@ export default async () => {
                 props: {
                   style: {
                     fontSize: 24,
-                    color: "#94a3b8", // Texto sutil
+                    color: THEME.dark.muted,
                     fontWeight: 600,
                     letterSpacing: "1px",
                   },

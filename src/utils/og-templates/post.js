@@ -1,5 +1,6 @@
 import satori from "satori";
 import { SITE } from "@/config";
+import { THEME } from "@/config/theme";
 import loadGoogleFonts from "../loadGoogleFont";
 
 export default async post => {
@@ -14,13 +15,13 @@ export default async post => {
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "space-between",
-          backgroundColor: "#0f172a", // Dark background (Slate 900)
-          color: "white",
+          backgroundColor: THEME.dark.background,
+          color: THEME.dark.foreground,
           padding: "80px",
           position: "relative",
         },
         children: [
-          // 1. Background Decorative Element (Painted first = stays at the back)
+          // 1. Background Decorative Element
           {
             type: "div",
             props: {
@@ -30,36 +31,59 @@ export default async post => {
                 right: "-100px",
                 width: "600px",
                 height: "600px",
-                background: "linear-gradient(140deg, #6366f1, #a855f7)",
+                background: `linear-gradient(140deg, ${THEME.dark.accent}, ${THEME.dark.muted})`,
                 filter: "blur(100px)",
-                opacity: 0.4,
+                opacity: 0.15,
                 borderRadius: "100%",
               },
             },
           },
 
-          // 2. Header: Site name (Painted on top of background)
+          // 2. Header: Site name
           {
             type: "div",
             props: {
               style: {
                 display: "flex",
                 alignItems: "center",
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
+                backgroundColor: `${THEME.dark.foreground}0D`,
                 padding: "10px 24px",
                 borderRadius: "50px",
-                border: "1px solid rgba(255, 255, 255, 0.2)",
+                border: `1px solid ${THEME.dark.foreground}1A`,
               },
               children: {
                 type: "span",
                 props: {
                   style: {
+                    display: "flex",
+                    alignItems: "center",
                     fontSize: 24,
                     fontWeight: "bold",
-                    color: "#e2e8f0",
                     letterSpacing: "2px",
                   },
-                  children: SITE.title + ".com",
+                  children: [
+                    {
+                      type: "span",
+                      props: {
+                        style: { color: THEME.dark.foreground },
+                        children: "Harry",
+                      },
+                    },
+                    {
+                      type: "span",
+                      props: {
+                        style: { color: THEME.dark.accent, margin: "0 8px" },
+                        children: "{☕}",
+                      },
+                    },
+                    {
+                      type: "span",
+                      props: {
+                        style: { color: THEME.dark.foreground },
+                        children: "blog",
+                      },
+                    },
+                  ],
                 },
               },
             },
@@ -73,7 +97,6 @@ export default async post => {
                 display: "flex",
                 flexDirection: "column",
                 width: "100%",
-                // zIndex removed (not needed due to child order)
               },
               children: {
                 type: "h1",
@@ -83,13 +106,7 @@ export default async post => {
                     fontWeight: 900,
                     lineHeight: 1.1,
                     margin: 0,
-                    color: "#ffffff",
-                    textShadow: "0 2px 10px rgba(0,0,0,0.3)",
-
-                    overflow: "hidden",
-                    display: "-webkit-box",
-                    lineClamp: 3,
-                    boxOrient: "vertical",
+                    color: THEME.dark.foreground,
                   },
                   children: post.data.title,
                 },
@@ -105,7 +122,6 @@ export default async post => {
                 display: "flex",
                 alignItems: "center",
                 width: "100%",
-                // zIndex removed
               },
               children: [
                 // Decorative separator line
@@ -115,7 +131,7 @@ export default async post => {
                     style: {
                       width: "60px",
                       height: "4px",
-                      backgroundColor: "#818cf8",
+                      backgroundColor: THEME.dark.accent,
                       marginRight: "24px",
                     },
                   },
@@ -125,7 +141,7 @@ export default async post => {
                   props: {
                     style: {
                       fontSize: 32,
-                      color: "#cbd5e1",
+                      color: THEME.light.muted,
                     },
                     children: [
                       "Written by ",
@@ -134,7 +150,7 @@ export default async post => {
                         props: {
                           style: {
                             fontWeight: "bold",
-                            color: "white",
+                            color: THEME.dark.foreground,
                             marginLeft: "8px",
                           },
                           children: post.data.author,

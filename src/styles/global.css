@@ -5,19 +5,37 @@
 
 :root,
 html[data-theme="light"] {
-  --background: #f2f5ec;
-  --foreground: #353538;
-  --accent: #1158d1;
-  --muted: #bbc789;
-  --border: #7cadff;
+  --background: #faf9f5;
+  /* Claude Sand */
+  --foreground: #141413;
+  /* Claude Carbon */
+  --accent: #d97757;
+  /* Claude Rust-Orange */
+  --muted: #b0aea5;
+  /* Claude Mid-Gray */
+  --border: #e8e6dc;
+  /* Claude Light-Gray */
+  --success: #10b981;
+  /* Emerald */
+  --error: #ef4444;
+  /* Red */
 }
 
 html[data-theme="dark"] {
-  --background: #10131a;
-  --foreground: #f6f7f8;
-  --accent: #008fec;
-  --muted: #212f3f;
-  --border: #2264e3;
+  --background: #141413;
+  /* Claude Carbon */
+  --foreground: #faf9f5;
+  /* Claude Sand */
+  --accent: #d97757;
+  /* Claude Rust-Orange */
+  --muted: #828179;
+  /* Claude Friar-Gray */
+  --border: #2a2a28;
+  /* Dark border */
+  --success: #10b981;
+  /* Emerald */
+  --error: #ef4444;
+  /* Red */
 }
 
 @theme inline {
@@ -29,6 +47,8 @@ html[data-theme="dark"] {
   --color-accent: var(--accent);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-success: var(--success);
+  --color-error: var(--error);
 }
 
 .italic,

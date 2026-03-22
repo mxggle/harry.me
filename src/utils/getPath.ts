@@ -1,6 +1,12 @@
 import { BLOG_PATH } from "@/content.config";
 import { slugifyStr } from "./slugify";
 
+type PostLike = {
+  id: string;
+  filePath?: string;
+  data: { slug?: string };
+};
+
 /**
  * Get full path of a blog post
  * @param id - id of the blog post (aka slug)
@@ -33,4 +39,16 @@ export function getPath(
   }
 
   return [basePath, ...pathSegments, slug].join("/");
+}
+
+/**
+ * Get the URL path for a blog post, preferring the explicit `slug` frontmatter
+ * field over the folder-derived path.
+ */
+export function getPostPath(post: PostLike, includeBase = true): string {
+  if (post.data.slug) {
+    const base = includeBase ? "/posts" : "";
+    return `${base}/${post.data.slug}`;
+  }
+  return getPath(post.id, post.filePath, includeBase);
 }

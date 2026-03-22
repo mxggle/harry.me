@@ -4,6 +4,7 @@ pubDatetime: 2026-01-28T00:00:00Z
 description: "Why I built LingoContext, a context-aware translation Chrome extension, and the philosophy of building your own tools."
 tags: ["ai", "thoughts"]
 ogImage: "./images/suit-tailor.png"
+slug: the-tailored-suit-why-i-build-my-own-tools-lingocontext
 draft: false
 featured: false
 ---

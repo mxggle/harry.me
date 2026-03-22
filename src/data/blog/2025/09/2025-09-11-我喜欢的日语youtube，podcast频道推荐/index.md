@@ -4,6 +4,7 @@ pubDatetime: 2025-09-11T00:00:00Z
 description: "A curated list of Japanese YouTube channels and podcasts recommended for language learners."
 tags: ["japanese", "language"]
 ogImage: "./images/ChatGPT-Image-Sep-12-2025-06_55_28-AM.png"
+slug: 我喜欢的日语youtube，podcast频道推荐
 draft: false
 featured: false
 ---
