@@ -4,7 +4,15 @@
       "Bash(pnpm install:*)",
       "Bash(pnpm build:*)",
       "Bash(npm run:*)",
-      "Bash(pnpm astro:*)"
+      "Bash(pnpm astro:*)",
+      "Bash(find /Users/szy/CascadeProjects/myblog -type f \\\\\\(-iname *.jpg -o -iname *.jpeg -o -iname *.png -o -iname *.gif -o -iname *.webp -o -iname *.svg -o -iname *.avif \\\\\\))",
+      "Bash(find /Users/szy/CascadeProjects/myblog/public -type f \\\\\\(-iname *.jpg -o -iname *.jpeg -o -iname *.png -o -iname *.gif -o -iname *.webp -o -iname *.svg -o -iname *.avif \\\\\\))",
+      "Bash(find /Users/szy/CascadeProjects/myblog/src -type f \\\\\\(-iname *.jpg -o -iname *.jpeg -o -iname *.png -o -iname *.gif -o -iname *.webp -o -iname *.svg -o -iname *.avif \\\\\\))",
+      "Bash(find /Users/szy/CascadeProjects/myblog/src -type f \\\\\\(-name *.md -o -name *.mdx -o -name *.astro -o -name *.ts -o -name *.tsx -o -name *.js -o -name *.jsx \\\\\\))",
+      "Bash(__NEW_LINE_637be92e0b72a6c3__ cd:*)",
+      "Bash(__NEW_LINE_b1e7002df401836e__ cd:*)",
+      "Bash(__NEW_LINE_bb6f3c9900ea5525__ cd:*)",
+      "Bash(__NEW_LINE_bb6f3c9900ea5525__ find:*)"
     ]
   }
 }

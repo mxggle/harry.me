@@ -73,17 +73,10 @@ export default defineConfig({
       },
     },
     {
-      name: "Sriracha",
-      cssVariable: "--font-sriracha",
-      fallbacks: ["cursive"],
-      provider: fontProviders.local(),
-      options: {
-        variants: [
-          {
-            src: ["./src/assets/fonts/sriracha.woff2"],
-          },
-        ],
-      },
+      name: "Lora",
+      cssVariable: "--font-quote",
+      fallbacks: ["serif"],
+      provider: fontProviders.google(),
     },
     {
       name: "Cartograph CF",

@@ -1,8 +1,21 @@
-<svg height="800" viewBox="0 0 1024 1024" width="800" xmlns="http://www.w3.org/2000/svg">
-  <path d="m32 512a480 480 0 1 0 960 0 480 480 0 1 0 -960 0z" fill="#f7e8e8"/>
-  <circle cx="512" cy="512" r="280" fill="#d46a6a" opacity="0.8"/>
-  <circle cx="512" cy="512" r="180" fill="#fdfaf7" opacity="0.9"/>
-  <text x="512" y="580" text-anchor="middle" style="fill: #d46a6a; font-family: 'Cascadia Code', monospace; font-size: 240px; font-weight: 700;">g</text>
-  <circle cx="512" cy="280" r="40" fill="#d46a6a"/>
-  <circle cx="512" cy="744" r="20" fill="#d46a6a" opacity="0.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Steam -->
+  <path d="M 40 28 C 37 22, 46 17, 42 10" fill="none" stroke="#A89F95" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 50 30 C 46 23, 58 17, 53 8" fill="none" stroke="#A89F95" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 60 28 C 57 22, 66 17, 62 10" fill="none" stroke="#A89F95" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Handle -->
+  <path d="M 72 45 C 90 45, 96 62, 85 71 C 80 75, 72 74, 72 74" fill="none" stroke="#4B3223" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Cup Body -->
+  <path d="M 25 38 L 25 70 C 25 82, 33 86, 50 86 C 67 86, 75 82, 75 70 L 75 38 Z" fill="#4B3223"/>
+
+  <!-- Cup Rim -->
+  <ellipse cx="50" cy="38" rx="25" ry="5.5" fill="#4B3223" />
+
+  <!-- Inside Liquid -->
+  <ellipse cx="50" cy="37.5" rx="22" ry="4" fill="#FDF8ED" />
+
+  <!-- Slash -->
+  <polygon points="60,45 53,45 40,77 47,77" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="2" stroke-linejoin="round"/>
 </svg>
