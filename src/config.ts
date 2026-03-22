@@ -10,7 +10,7 @@ export const SITE = {
   postPerPage: 8,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
   showArchives: true,
-  showGalleries: true,
+  showGalleries: false,
   showBackButton: true,
   editPost: {
     enabled: false,
@@ -20,7 +20,7 @@ export const SITE = {
   dynamicOgImage: true,
   dir: "ltr",
   lang: "en",
-  timezone: "Asia/Hong_Kong",
+  timezone: "Asia/Tokyo",
   introAudio: {
     enabled: false,
     src: "/audio/intro-web.mp3",
