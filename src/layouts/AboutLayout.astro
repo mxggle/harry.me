@@ -6,7 +6,7 @@ import Breadcrumb from "@/components/Breadcrumb.astro";
 import Layout from "./Layout.astro";
 import { SITE } from "@/config";
 
-type Props = MarkdownLayoutProps<{ title: string }>;
+type Props = MarkdownLayoutProps<{ title: string; badges?: string[] }>;
 
 const { frontmatter } = Astro.props;
 ---
@@ -32,11 +32,13 @@ const { frontmatter } = Astro.props;
           <span class="greeting">Hello! I'm</span>
           <span class="name-glow">{SITE.author}</span>
         </h1>
-        <div class="hero-badges">
-          <span class="badge" data-badge>🚀 Full-Stack Dev</span>
-          <span class="badge" data-badge>📚 Language Learner</span>
-          <span class="badge" data-badge>🌸 Tokyo Based</span>
-        </div>
+        {frontmatter.badges && frontmatter.badges.length > 0 && (
+          <div class="hero-badges">
+            {frontmatter.badges.map(badge => (
+              <span class="badge" data-badge>{badge}</span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
 

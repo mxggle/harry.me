@@ -41,9 +41,9 @@ I recently did some experiments — writing down all the tasks and issues to a f
 
 # Give more trust to AI
 
-> > **"I put a lot of trust in LLMs and AI these days… the models today are good enough for me to trust in their syntax output."  
+>  **"I put a lot of trust in LLMs and AI these days… the models today are good enough for me to trust in their syntax output."  
 > > "The ceiling on the AI isn't the model intelligence. It's what the model sees before it acts."  
-> > — Lazar Jovanovic**
+>  — Lazar Jovanovic**
 
 this reminds me pi-mono - which is the minimal agent behind OpenClaw.
 

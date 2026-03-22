@@ -255,7 +255,13 @@ const gridClass = {
 </dialog>
 
 <script>
+  let embedsCleanup: AbortController | null = null;
+
   function initEmbeds() {
+    if (embedsCleanup) embedsCleanup.abort();
+    embedsCleanup = new AbortController();
+    const { signal } = embedsCleanup;
+
     // Initialize all gallery embeds on the page
     document
       .querySelectorAll<HTMLElement>("[data-gallery-embed]")
@@ -264,7 +270,7 @@ const gridClass = {
         const lbId = `ge-lb-${slug}`;
         const lb = document.getElementById(lbId) as HTMLDialogElement | null;
         if (!lb) return;
-        const dialog = lb; // alias tipado para closures
+        const dialog = lb;
 
         const items = Array.from(
           embed.querySelectorAll<HTMLButtonElement>("[data-lb]")
@@ -297,25 +303,28 @@ const gridClass = {
           document.body.style.overflow = "";
         }
 
-        // Botones de las imágenes
+        // Image buttons
         items.forEach((btn, idx) => {
-          // Avoid duplicating listeners on re-init
-          btn.addEventListener("click", () => open(idx), { once: false });
+          btn.addEventListener("click", () => open(idx), { signal });
         });
 
         // Lightbox controls
-        lb.querySelector("[data-lb-close]")?.addEventListener("click", close);
-        lb.querySelector("[data-lb-prev]")?.addEventListener("click", () =>
-          open(current - 1)
+        lb.querySelector("[data-lb-close]")?.addEventListener("click", close, { signal });
+        lb.querySelector("[data-lb-prev]")?.addEventListener(
+          "click",
+          () => open(current - 1),
+          { signal }
         );
-        lb.querySelector("[data-lb-next]")?.addEventListener("click", () =>
-          open(current + 1)
+        lb.querySelector("[data-lb-next]")?.addEventListener(
+          "click",
+          () => open(current + 1),
+          { signal }
         );
 
         // Close on backdrop click
         lb.addEventListener("click", e => {
           if (e.target === dialog) close();
-        });
+        }, { signal });
 
         // Keyboard — only if THIS lightbox is open
         document.addEventListener("keydown", e => {
@@ -323,7 +332,7 @@ const gridClass = {
           if (e.key === "Escape") close();
           if (e.key === "ArrowLeft") open(current - 1);
           if (e.key === "ArrowRight") open(current + 1);
-        });
+        }, { signal });
       });
   }
 

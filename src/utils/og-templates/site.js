@@ -76,7 +76,7 @@ export default async () => {
                         type: "span",
                         props: {
                           style: { color: THEME.dark.foreground },
-                          children: "Harry",
+                          children: SITE.author,
                         },
                       },
                       {

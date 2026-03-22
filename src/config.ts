@@ -1,6 +1,7 @@
 export const SITE = {
   website: "https://harrysui.me/",
   author: "Harry",
+  email: "muggle6594@gmail.com",
   profile: "https://github.com/mxggle",
   desc: "A blog about language learning, AI, and thoughts.",
   title: "Harry's Blog",

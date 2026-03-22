@@ -20,6 +20,10 @@ async function loadGoogleFont(
 
   if (!resource) throw new Error("Failed to download dynamic font");
 
+  if (!resource[1].startsWith("https://fonts.gstatic.com/")) {
+    throw new Error("Unexpected font URL origin: " + resource[1]);
+  }
+
   const res = await fetch(resource[1]);
 
   if (!res.ok) {

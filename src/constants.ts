@@ -7,6 +7,7 @@ import IconWhatsapp from "@/assets/icons/IconWhatsapp.svg";
 import IconFacebook from "@/assets/icons/IconFacebook.svg";
 import IconTelegram from "@/assets/icons/IconTelegram.svg";
 import IconPinterest from "@/assets/icons/IconPinterest.svg";
+import Icon500px from "@/assets/icons/Icon500px.svg";
 import { SITE } from "@/config";
 
 interface Social {
@@ -25,9 +26,15 @@ export const SOCIALS: Social[] = [
   },
   {
     name: "Mail",
-    href: "mailto:muggle6594@gmail.com",
+    href: `mailto:${SITE.email}`,
     linkTitle: `Send an email to ${SITE.title}`,
     icon: IconMail,
+  },
+  {
+    name: "500px",
+    href: "https://500px.com/p/harryzss?view=photos",
+    linkTitle: `${SITE.title} on 500px`,
+    icon: Icon500px,
   },
 ] as const;
 
