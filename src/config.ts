@@ -4,7 +4,7 @@ export const SITE = {
   profile: "https://github.com/mxggle",
   desc: "A blog about language learning, AI, and thoughts.",
   title: "Harry's Blog",
-  ogImage: "devosfera-og.webp",
+  ogImage: "devharry-og.webp",
   lightAndDarkMode: true,
   postPerIndex: 6,
   postPerPage: 8,

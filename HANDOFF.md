@@ -2,7 +2,7 @@
 
 ## What's done
 
-The blog is scaffolded and builds cleanly using the Devosfera theme (https://github.com/0xdres/astro-devosfera), MIT licensed. It includes:
+The blog is scaffolded and builds cleanly using the Devharry theme (https://github.com/0xdres/astro-devharry), MIT licensed. It includes:
 
 - Full blog with post cards, glow effects, shimmer animations
 - ⌘K search (Pagefind, fully wired)
@@ -78,7 +78,7 @@ Reference in frontmatter: `ogImage: "./cover.jpg"`
 
 ### 6. Replace the OG image
 
-`public/devosfera-og.webp` → replace with your own og image (used as the default social share image).
+`public/devharry-og.webp` → replace with your own og image (used as the default social share image).
 Update the filename in `src/config.ts` → `ogImage`.
 
 ### 7. WordPress migration
@@ -123,7 +123,7 @@ src/
 
 public/
 ├── audio/             ← intro audio (can disable in config.ts)
-└── devosfera-og.webp  ← replace with your OG image
+└── devharry-og.webp  ← replace with your OG image
 ```
 
 ## Obsidian workflow

@@ -61,7 +61,7 @@ h3 {
 **File:** `src/components/Header.astro`
 - **Refactor:** Redesigned responsive navigation bar.
 - **Changes:**
-    - Added "Devosfera" SVG logo.
+    - Added "Devharry" SVG logo.
     - Integrated `SearchModal` trigger button.
     - Improved mobile menu interactions and layout.
 
@@ -85,7 +85,7 @@ h3 {
 
 **File:** `src/pages/index.astro` (Home)
 - **Hero Section:** Completely redesigned with a "Terminal" aesthetic.
-    - Added animated "Ping" badge (`~/devosfera`).
+    - Added animated "Ping" badge (`~/devharry`).
     - Implemented a "Shimmer" gradient animation for the main title.
 - **Layout:**
     - Introduced "Decorative Section Separators" (e.g., `// posts`, `// recientes`).
@@ -104,7 +104,7 @@ h3 {
 **File:** `src/styles/global.css` & `src/styles/typography.css`
 - **Aurora Effect:** Added CSS classes and animations for the background "Aurora" orbs seen in the Search Modal.
 - **Cursor Glow:** Implemented CSS/JS for cursor-following glow effects on cards and modals.
-- **Assets:** Added `devosfera.svg` logo and optimized font assets.
+- **Assets:** Added `logo.svg` logo and optimized font assets.
 
 
 **File:** `src/styles/global.css`
@@ -346,7 +346,7 @@ Complete hero redesign with interactive effects:
 Rewritten from default AstroPaper template to personalized content as Andrés:
 
 - Introduction as developer, student, and gamer.
-- Sections: ¿Quién soy?, Lo que hago (web dev, open source, continuous learning), Gaming, Este blog (Devosfera purpose).
+- Sections: ¿Quién soy?, Lo que hago (web dev, open source, continuous learning), Gaming, Este blog (Devharry purpose).
 - Links to real social profiles (GitHub, X, LinkedIn).
 - Closing quote in blockquote style.
 
@@ -464,10 +464,10 @@ Split the desktop search functionality into two distinct elements:
 ## 25. Logo SVG Redesign with Cascadia Code Font & Hover Effects
 
 **Files:**
-- `src/assets/logo/devosfera.svg`
+- `src/assets/logo/logo.svg`
 - `src/components/Header.astro`
 
-### SVG (`devosfera.svg`)
+### SVG (`logo.svg`)
 
 Replaced the previous path-based SVG logo with a text-based SVG using `<text>` elements:
 
