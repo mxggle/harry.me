@@ -12,7 +12,10 @@
       "Bash(__NEW_LINE_637be92e0b72a6c3__ cd:*)",
       "Bash(__NEW_LINE_b1e7002df401836e__ cd:*)",
       "Bash(__NEW_LINE_bb6f3c9900ea5525__ cd:*)",
-      "Bash(__NEW_LINE_bb6f3c9900ea5525__ find:*)"
+      "Bash(__NEW_LINE_bb6f3c9900ea5525__ find:*)",
+      "Bash(grep -r \"placeholder\\\\|example\\\\|lorem\\\\|TODO\\\\|FIXME\\\\|demo\" /Users/szy/CascadeProjects/myblog/src --include=*.ts --include=*.tsx --include=*.astro --include=*.json)",
+      "Bash(grep -r \"tmp\\\\|temporary\\\\|delete me\\\\|remove me\\\\|WIP\\\\|work in progress\" /Users/szy/CascadeProjects/myblog/src --include=*.ts --include=*.tsx --include=*.astro --include=*.md --include=*.mdx)",
+      "Bash(file:*)"
     ]
   }
 }
