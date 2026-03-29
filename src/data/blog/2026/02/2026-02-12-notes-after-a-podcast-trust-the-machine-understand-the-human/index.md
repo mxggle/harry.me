@@ -6,7 +6,7 @@ tags: ["ai", "thoughts"]
 ogImage: "./images/ai-reflection-on-bug.jpg"
 slug: notes-after-a-podcast-trust-the-machine-understand-the-human
 draft: false
-featured: false
+featured: true
 ---
 
 Just finished listening to an episode from Lenny's Podcast. [Getting paid to vibe code: Inside the new AI-era job | Lazar Jovanovic (Professional Vibe Coder)](https://www.lennysnewsletter.com/p/getting-paid-to-vibe-code)  

@@ -75,16 +75,6 @@ The structure encodes a learning philosophy directly into the UI: *start here, g
 
 ---
 
-## What Changed in the Code
-
-The implementation was clean because the design logic was clear. The old homepage imported four components: `SiteNav`, `HeroSection`, `ProgressIsland`, and `ModeCardsSection`. The new one imports two: `SiteNav` and `HomeGrid`.
-
-`HomeGrid` is a single server component that renders all three tiers. No client-side state, no data fetching — just structure and links. The streak and mastered-word count that previously floated in a separate `ProgressIsland` component got moved into the nav as a small `NavStats` client component, where they become ambient context rather than a focal point.
-
-The result is a homepage that does less, communicates more, and gets out of the user's way faster.
-
----
-
 ## The Broader Lesson
 
 The most useful thing the agent did in this process wasn't generate layout options or write the code. It was ask a question that forced me to be specific about what the product was for — and then reason from that specificity to a design conclusion I hadn't reached on my own.
