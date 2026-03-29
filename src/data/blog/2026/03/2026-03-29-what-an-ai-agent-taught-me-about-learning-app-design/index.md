@@ -1,6 +1,6 @@
 ---
 title: "What an AI Agent Taught Me About Learning App Design"
-pubDatetime: 2026-03-29T22:15:00Z
+pubDatetime: 2026-03-29T13:15:00Z
 description: "Insights on how collaborating with an AI agent transformed my approach to building language learning tools, from data structure to UI design."
 tags: ["ai", "design", "learning"]
 slug: what-an-ai-agent-taught-me-about-learning-app-design
