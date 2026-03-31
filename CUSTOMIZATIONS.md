@@ -577,7 +577,7 @@ introAudio: {
   enabled: true,               // show/hide the player in the hero
   src: "/audio/intro-web.mp3", // path relative to /public
   label: "INTRO.MP3",          // display label in the player
-  duration: 30,                // seconds — used as progress bar fallback before metadata loads
+  duration: 60,                // seconds — used as progress bar fallback before metadata loads
 },
 ```
 

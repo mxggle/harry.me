@@ -27,7 +27,7 @@ Replace all values with yours:
 website: "https://harrysui.me/",
 author: "Harry",
 profile: "https://github.com/YOUR_GITHUB",
-desc: "A blog about language learning, AI, and thoughts.",
+desc: "A blog about language learning, Coding, AI, and thoughts.",
 title: "Harry's Blog",
 lang: "en",
 timezone: "Asia/Hong_Kong",        // or your actual timezone

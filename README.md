@@ -273,7 +273,7 @@ export const SITE = {
     enabled: true,               // show/hide the hero audio player
     src: "/audio/intro-web.mp3", // path relative to /public
     label: "INTRO.MP3",
-    duration: 30,                // seconds
+    duration: 60,                // seconds
   },
 };
 ```

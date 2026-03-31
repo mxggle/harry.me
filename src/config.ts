@@ -3,7 +3,7 @@ export const SITE = {
   author: "Harry",
   email: "muggle6594@gmail.com",
   profile: "https://github.com/mxggle",
-  desc: "A blog about language learning, AI, and thoughts.",
+  desc: "A blog about language learning, Coding, AI, and thoughts.",
   title: "Harry's Blog",
   ogImage: "devharry-og.webp",
   lightAndDarkMode: true,
@@ -26,6 +26,6 @@ export const SITE = {
     enabled: true,
     src: "/audio/intro-web.mp3",
     label: "INTRO.MP3",
-    duration: 30,
+    duration: 60,
   },
 } as const;
