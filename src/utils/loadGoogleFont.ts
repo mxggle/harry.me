@@ -15,7 +15,7 @@ async function loadGoogleFont(
   ).text();
 
   const resource = css.match(
-    /src: url\((.+?)\) format\('(opentype|truetype)'\)/
+    /src: url\((.+?)\) format\('(opentype|truetype|woff2)'\)/i
   );
 
   if (!resource) throw new Error("Failed to download dynamic font");
@@ -46,14 +46,36 @@ async function loadGoogleFonts(
       weight: 700,
       style: "normal",
     },
+    {
+      name: "Noto Sans",
+      font: "Noto+Sans",
+      weight: 900,
+      style: "normal",
+    },
+    {
+      name: "Noto Emoji",
+      font: "Noto+Emoji", weight: 400, style: "normal"
+    },
   ];
 
-  const fonts = await Promise.all(
-    fontsConfig.map(async ({ name, font, weight, style }) => {
-      const data = await loadGoogleFont(font, text, weight);
-      return { name, data, weight, style };
-    })
-  );
+  const fonts = (
+    await Promise.all(
+      fontsConfig.map(async ({ name, font, weight, style }) => {
+        try {
+          const data = await loadGoogleFont(font, text, weight);
+          return { name, data, weight, style };
+        } catch (e) {
+          console.warn(`Failed to load font ${font}:`, e);
+          return null;
+        }
+      })
+    )
+  ).filter(f => f !== null) as Array<{
+    name: string;
+    data: ArrayBuffer;
+    weight: number;
+    style: string;
+  }>;
 
   return fonts;
 }
