@@ -73,7 +73,7 @@ export default async post => {
                       type: "span",
                       props: {
                         style: { color: THEME.dark.accent, margin: "0 8px" },
-                        children: "{☕}",
+                        children: "{-}",
                       },
                     },
                     {
