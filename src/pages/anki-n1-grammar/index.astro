@@ -1,0 +1,73 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { SITE } from "@/config";
+---
+
+<Layout title={`支持 Anki N1 语法卡组 | ${SITE.title}`}>
+  <Header />
+
+  <main id="main-content" class="app-layout">
+    <div class="relative pt-16 pb-20 sm:pt-24 sm:pb-28">
+      <!-- Background Effects -->
+      <div class="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-accent/20 blur-[100px] animate-pulse"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-accent/10 blur-[100px] animate-pulse" style="animation-delay: 2s;"></div>
+      </div>
+
+      <div class="relative z-10 flex flex-col items-center text-center px-4">
+        <!-- Badge -->
+        <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-2 font-cartograph text-sm text-accent backdrop-blur-sm">
+          <span class="relative flex h-2 w-2">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-70"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-accent"></span>
+          </span>
+          JLPT N1 语法卡组
+        </div>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+          感谢你的<span class="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent/60">支持</span>！
+        </h1>
+        
+        <p class="max-w-2xl text-lg md:text-xl opacity-80 mb-12 leading-relaxed">
+          如果这个 Anki 卡组对你的日语学习有所帮助，欢迎打赏支持。<br />
+          你的支持将帮助我持续维护和创作更多高质量的学习资源！☕️
+        </p>
+
+        <!-- Donation Cards -->
+        <div class="flex flex-col items-center gap-8 w-full max-w-lg">
+          
+          <!-- WeChat / Alipay Placeholder -->
+          <div class="w-full group relative flex flex-col items-center p-8 rounded-3xl border border-border/40 bg-muted/10 backdrop-blur-md transition-all duration-300 hover:border-accent/50 hover:bg-muted/20 hover:shadow-2xl hover:shadow-accent/10">
+            <div class="w-16 h-16 mb-6 rounded-2xl bg-[#07C160]/20 text-[#07C160] flex items-center justify-center text-3xl transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-6">
+              💸
+            </div>
+            <h3 class="text-2xl font-bold mb-3">微信 </h3>
+            <p class="text-sm opacity-70 mb-8 text-center flex-grow">
+              扫描下方二维码即可进行打赏。
+            </p>
+            
+            <!-- QR Code Image -->
+            <div class="w-full max-w-[280px] rounded-2xl overflow-hidden shadow-xl mx-auto transition-transform duration-300 group-hover:scale-105 bg-black/5">
+              <img src="/reward-qr.jpg" alt="赞赏码" class="w-full h-auto object-contain" />
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-16 text-center">
+          <a href="/" class="inline-flex items-center gap-2 text-sm font-medium opacity-60 transition-all hover:opacity-100 hover:text-accent">
+            <svg class="size-4 transition-transform group-hover:-translate-x-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fill-rule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clip-rule="evenodd" />
+            </svg>
+            返回首页
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
