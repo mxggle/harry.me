@@ -1,10 +1,4 @@
-# Devharry Blog
-
-Heavily customized version of the [AstroPaper](https://github.com/satnaing/astro-paper) theme with a **Terminal/Cyberpunk** aesthetic, image galleries, global search modal, and dozens of visual and interactive improvements.
-
-**🌐 Live demo:** [devharry.vercel.app](https://devharry.vercel.app)
-
-![Devharry OG](public/devharry-og.webp)
+# Dev Harry Blog
 
 > **Note:** This project is primarily my personal blog. If anyone wishes to use it, feel free to delete all entries and edit the settings freely.
 
@@ -12,69 +6,15 @@ Heavily customized version of the [AstroPaper](https://github.com/satnaing/astro
 
 ## Table of contents
 
-1. [Features](#-features)
-2. [Project structure](#-project-structure)
-3. [Installation & local development](#-installation--local-development)
-4. [Commands](#-commands)
-5. [Creating content](#-creating-content)
+1. [Project structure](#-project-structure)
+2. [Installation & local development](#-installation--local-development)
+3. [Commands](#-commands)
+4. [Creating content](#-creating-content)
    - [Posts](#posts-srcdatablog)
    - [Image galleries](#galleries-srcdatagalleries)
-6. [GalleryEmbed component](#%EF%B8%8F-galleryembed-component)
-7. [Configuration](#%EF%B8%8F-configuration)
-8. [Key components](#-key-components)
-9. [Upstream issues resolved](#-upstream-issues-resolved)
-10. [License](#-license)
-
----
-
-## ✨ Features
-
-### Core (inherited from AstroPaper)
-
-- Type-safe Markdown, 100/100 Lighthouse performance, accessible and responsive
-- Full SEO (meta tags, Open Graph, sitemap, RSS), light/dark mode
-- Dynamically generated OG images with Satori
-
-### Terminal/Cyberpunk design
-
-- Hero with animated prompt `~/ready-to-go $`, shimmer title and `// posts` decorative separators
-- Global backdrop: grid + ambient glow + cursor glow + noise texture (all pages)
-- Glassmorphism on navbar, TOC, cards and modals
-
-### Custom typography
-
-| Role          | Font                      |
-| :------------ | :------------------------ |
-| Body          | `Wotfard` (local)         |
-| Code / Mono   | `Cascadia Code` (local)   |
-| Italics / H3  | `Sriracha` (Google Fonts) |
-
-### Global search (⌘K)
-
-- Modal via `⌘K` / `Ctrl+K` powered by **Pagefind** (static index)
-- Animated aurora, reactive cursor glow, full keyboard navigation
-
-### Image galleries (`/galleries`)
-
-- Albums in `src/data/galleries/<slug>/`; images optimized at build-time (srcset, WebP, lazy)
-- Native lightbox with `<dialog>`, responsive grid 2→4 cols
-- `<GalleryEmbed>` to embed galleries inside MDX posts without importing
-- Controlled by `showGalleries` in `src/config.ts` — see [GALLERIES.md](GALLERIES.md)
-
-### Branded audio player
-
-- Intro audio player in the hero with terminal aesthetic (wave bars, progress bar)
-- Fully togglable and configurable from `src/config.ts`
-
-### Redesigned pages
-
-| Page        | Highlights                                          |
-| :---------- | :-------------------------------------------------- |
-| `/` Home    | Terminal hero, featured grid, section counters      |
-| `/archives` | Vertical timeline with glow                         |
-| `/tags`     | Grid with proportional progress bar                 |
-| `/search`   | Reactive aurora, restyled Pagefind                  |
-| Posts       | Glassmorphism TOC, prev/next navigation with aurora |
+5. [GalleryEmbed component](#%EF%B8%8F-galleryembed-component)
+6. [Configuration](#%EF%B8%8F-configuration)
+7. [License](#-license)
 
 ---
 
@@ -122,8 +62,8 @@ pnpm run build && pnpm run preview
 ### Docker
 
 ```bash
-docker build -t devharry-blog .
-docker run -p 4321:80 devharry-blog
+docker build -t Dev Harry-blog .
+docker run -p 4321:80 Dev Harry-blog
 ```
 
 ---
@@ -260,10 +200,10 @@ All site configuration lives in `src/config.ts` (the `SITE` constant):
 
 ```ts
 export const SITE = {
-  website: "https://devharry.vercel.app/",
+  website: "https://Dev Harry.vercel.app/",
   author: "Andrés",
   desc: "A space where curiosity turns into code",
-  title: "Devharry",
+  title: "Dev Harry",
   timezone: "America/Guatemala",  // default timezone for posts
   showArchives: true,
   showGalleries: true,   // false → hides /galleries and the nav link
@@ -281,38 +221,6 @@ export const SITE = {
 Social links and "Share" links are defined in `src/constants.ts`.
 
 > For details on visual effects, typography and the design system see [CUSTOMIZATIONS.md](CUSTOMIZATIONS.md).
-
----
-
-## 🧩 Key components
-
-| Component               | Description                                                                      |
-| :---------------------- | :------------------------------------------------------------------------------- |
-| `Header.astro`          | Glassmorphism navbar with animated SVG logo, `⌘K` trigger, fullscreen mobile menu |
-| `SearchModal.astro`     | Global Cmd+K modal with Aurora background, reactive cursor glow and Pagefind     |
-| `GalleryCard.astro`     | Card for the `/galleries` listing with optimized cover image                     |
-| `GalleryEmbed.astro`    | Gallery embed for MDX posts with its own lightbox                                |
-| `Card.astro`            | Post card with reactive cursor glow (`.card-glow-effect`)                        |
-| `BackToTopButton.astro` | `fixed` button with SVG progress ring, unified mobile/desktop design             |
-| `BackButton.astro`      | Glassmorphism pill with inline breadcrumb and chevron animation                  |
-| `ShareLinks.astro`      | Square glassmorphism share buttons, open in new tab                              |
-| `Footer.astro`          | Brand column + social links + copyright, gradient separators                     |
-
----
-
-## 🐛 Upstream issues resolved
-
-Bugs and feature requests from the official [AstroPaper](https://github.com/satnaing/astro-paper) repository implemented in this version:
-
-| Issue                                                      | Description                                                                                                                                                                                                             | Files                                        | Credits                                                                                                                                                   |
-| :--------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [#614](https://github.com/satnaing/astro-paper/issues/614) | **Back to Top shifts the pagination button** when `ShareLinks` is empty                                                                                                                                                 | `BackToTopButton.astro`                      | —                                                                                                                                                         |
-| [#574](https://github.com/satnaing/astro-paper/issues/574) | **Markdown tables overflow the layout on mobile** — fixed with `w-full table-auto` and `word-wrap` on cells                                                                                                             | `typography.css`                             | [@GladerJ](https://github.com/GladerJ) — [solution](https://github.com/satnaing/astro-paper/issues/574#issuecomment-3427381261)                           |
-| [#569](https://github.com/satnaing/astro-paper/issues/569) | **Back to Top inconsistent on desktop** — unified circular design with progress ring and `fixed` positioning                                                                                                            | `BackToTopButton.astro`, `PostDetails.astro` | —                                                                                                                                                         |
-| [#566](https://github.com/satnaing/astro-paper/issues/566) | **Share links don't open in a new tab** — added `target="_blank"` and `rel="noopener noreferrer"`                                                                                                                       | `ShareLinks.astro`                           | [PR #611](https://github.com/satnaing/astro-paper/pull/611) by [@zerone0x](https://github.com/zerone0x)                                                   |
-| [#131](https://github.com/satnaing/astro-paper/issues/131) | **No MDX support** — added `@astrojs/mdx` integration with `extendMarkdownConfig: true`                                                                                                                                | `astro.config.ts`, `content.config.ts`       | —                                                                                                                                                         |
-| [#495](https://github.com/satnaing/astro-paper/issues/495) | **Inconsistent post filtering by timezone** — fixed using `dayjs` + `utc`/`timezone` plugins; also fixed a bug in the reference solution that used `.millisecond()` instead of `.valueOf()`                            | `postFilter.ts`                              | [@kj-9](https://github.com/kj-9) — [reference fix](https://github.com/satnaing/astro-paper/compare/main...kj-9:astro-paper:fix-post-filter-date)          |
-| [#553](https://github.com/satnaing/astro-paper/issues/553) | **No galleries section** — implemented full `/galleries` section with lightbox, `GalleryEmbed`, image optimization and `showGalleries` flag. See [GALLERIES.md](GALLERIES.md)                                           | multiple — see GALLERIES.md                  | —                                                                                                                                                         |
 
 ---
 
