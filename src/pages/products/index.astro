@@ -1,0 +1,446 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import { SITE } from "@/config";
+
+const featured = [
+  {
+    icon: "⚔️",
+    name: "Kanji Kaisen",
+    desc: "A gamified kanji learning app that combines spaced repetition with stroke recognition to make daily practice engaging and effective.",
+    url: "https://kanji-kaisen.harrysui.me",
+    live: true,
+  },
+  {
+    icon: "🧩",
+    name: "Katachi",
+    desc: "A polished Japanese conjugation trainer built to help learners master core grammar forms through focused, repeatable practice.",
+    url: "https://katachi.harrysui.me/",
+    live: true,
+  },
+  {
+    icon: "🔁",
+    name: "Lingo Loop",
+    desc: "A modern loop player for language learners that supports precise A-B repeat, shadowing, and recording across local media and YouTube.",
+    url: "https://github.com/mxggle/lingoloop",
+    live: false,
+  },
+  {
+    icon: "🧠",
+    name: "Lingo Context",
+    desc: "A Chrome extension that delivers instant AI-powered context, grammar explanations, and pronunciation support while you read.",
+    url: "https://github.com/mxggle/Lingo-context",
+    live: false,
+  },
+  {
+    icon: "✒️",
+    name: "Moji Fu",
+    desc: "A lightweight Chrome extension for capturing and reusing web font styles with a single click.",
+    url: "https://github.com/mxggle/moji-fu",
+    live: false,
+  },
+];
+
+const tools = [
+  {
+    icon: "🎬",
+    name: "Subtitle Pipeline",
+    desc: "A subtitle processing toolkit for extracting, merging, and preparing bilingual subtitles for language learning workflows.",
+    url: "https://github.com/mxggle/subtitle-pipeline",
+  },
+  {
+    icon: "🖌️",
+    name: "Kanji Recognizer",
+    desc: "A lightweight JavaScript library for kanji stroke recognition and validation built for interactive writing practice.",
+    url: "https://github.com/mxggle/kanji-recognizer",
+  },
+];
+
+const learning = [
+  {
+    icon: "🎴",
+    name: "Anki JLPT N3 Grammar",
+    desc: "JLPT N3 grammar Anki deck with examples and audio support.",
+    url: "https://ankiweb.net/shared/info/497821666",
+  },
+  {
+    icon: "🎴",
+    name: "Anki JLPT N2 Grammar",
+    desc: "JLPT N2 grammar Anki deck with examples and audio support.",
+    url: "https://github.com/mxggle/anki-jlpt-n2-grammar-example-sentences",
+  },
+  {
+    icon: "🎴",
+    name: "Anki JLPT N1 Grammar",
+    desc: "JLPT N1 grammar Anki deck with examples and audio support.",
+    url: "https://github.com/mxggle/anki-jlpt-n1-grammar-example-sentences",
+  },
+];
+---
+
+<Layout title={`Products | ${SITE.title}`} description="Projects and tools built by Harry.">
+  <Header />
+  <Breadcrumb />
+  <main id="main-content" class="app-layout pb-16">
+    <!-- Hero -->
+    <div class="products-hero" data-products-hero>
+      <div class="aurora-orb aurora-orb-1"></div>
+      <div class="aurora-orb aurora-orb-2"></div>
+      <div class="aurora-orb aurora-orb-3"></div>
+      <div class="aurora-mouse" data-products-mouse></div>
+      <div class="relative z-10">
+        <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">
+          <span class="glow-text">Products</span>
+        </h1>
+        <p class="mt-3 max-w-lg text-foreground/70 italic">
+          Tools, apps, and learning materials I've built — mostly for language learning and developer productivity.
+        </p>
+        <div class="mt-4 flex flex-wrap items-center gap-2">
+          <span class="hero-badge">{featured.length} projects</span>
+          <span class="hero-badge">{learning.length} learning materials</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Projects -->
+    <section class="mb-12">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="products-grid">
+        {featured.map((p, i) => (
+          <a
+            href={p.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="product-card"
+            data-product-card
+            style={`--i:${i}`}
+          >
+            <div class="card-aurora" data-card-aurora></div>
+            <div class="card-inner">
+              <div class="card-icon">{p.icon}</div>
+              <div class="card-body">
+                <div class="card-name-row">
+                  <span class="card-name">{p.name}</span>
+                  {p.live && <span class="live-badge">Live</span>}
+                </div>
+                <p class="card-desc">{p.desc}</p>
+              </div>
+              <div class="card-arrow">→</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Learning Materials -->
+    <section class="mb-12">
+      <h2 class="section-title">Learning Materials</h2>
+      <div class="products-grid">
+        {learning.map((p, i) => (
+          <a
+            href={p.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="product-card"
+            data-product-card
+            style={`--i:${i}`}
+          >
+            <div class="card-aurora" data-card-aurora></div>
+            <div class="card-inner">
+              <div class="card-icon">{p.icon}</div>
+              <div class="card-body">
+                <span class="card-name">{p.name}</span>
+                <p class="card-desc">{p.desc}</p>
+              </div>
+              <div class="card-arrow">→</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <!-- Developer Tools -->
+    <section>
+      <h2 class="section-title">Developer Tools</h2>
+      <div class="products-grid">
+        {tools.map((p, i) => (
+          <a
+            href={p.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="product-card"
+            data-product-card
+            style={`--i:${i}`}
+          >
+            <div class="card-aurora" data-card-aurora></div>
+            <div class="card-inner">
+              <div class="card-icon">{p.icon}</div>
+              <div class="card-body">
+                <span class="card-name">{p.name}</span>
+                <p class="card-desc">{p.desc}</p>
+              </div>
+              <div class="card-arrow">→</div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script>
+  let productsCleanup: AbortController | null = null;
+
+  document.addEventListener("astro:page-load", () => {
+    if (productsCleanup) productsCleanup.abort();
+    productsCleanup = new AbortController();
+    const { signal } = productsCleanup;
+
+    const hero = document.querySelector("[data-products-hero]") as HTMLElement;
+    const heroMouse = document.querySelector("[data-products-mouse]") as HTMLElement;
+    if (hero && heroMouse) {
+      hero.addEventListener("mousemove", e => {
+        requestAnimationFrame(() => {
+          const rect = hero.getBoundingClientRect();
+          heroMouse.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+          heroMouse.style.setProperty("--my", `${e.clientY - rect.top}px`);
+          heroMouse.style.opacity = "1";
+        });
+      }, { signal });
+      hero.addEventListener("mouseleave", () => {
+        heroMouse.style.opacity = "0";
+      }, { signal });
+    }
+
+    document.querySelectorAll("[data-product-card]").forEach(card => {
+      const aurora = card.querySelector("[data-card-aurora]") as HTMLElement;
+      if (!aurora) return;
+      card.addEventListener("mousemove", e => {
+        requestAnimationFrame(() => {
+          const rect = (card as HTMLElement).getBoundingClientRect();
+          const x = (e as MouseEvent).clientX - rect.left;
+          const y = (e as MouseEvent).clientY - rect.top;
+          aurora.style.setProperty("--mx", `${x}px`);
+          aurora.style.setProperty("--my", `${y}px`);
+          aurora.style.opacity = "1";
+        });
+      }, { signal });
+      card.addEventListener("mouseleave", () => {
+        aurora.style.opacity = "0";
+      }, { signal });
+    });
+  });
+</script>
+
+<style>
+  /* Hero */
+  .products-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
+    background: color-mix(in srgb, var(--color-foreground) 3%, var(--color-background));
+    border: 1px solid color-mix(in srgb, var(--color-accent) 12%, transparent);
+  }
+  @media (min-width: 640px) {
+    .products-hero { padding: 3rem; }
+  }
+
+  .aurora-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    will-change: transform;
+  }
+  .aurora-orb-1 {
+    width: 300px; height: 300px;
+    top: -30%; left: -10%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 25%, transparent), transparent 70%);
+    animation: orb-1 7s ease-in-out infinite alternate;
+  }
+  .aurora-orb-2 {
+    width: 250px; height: 250px;
+    top: 10%; right: -5%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-border) 20%, transparent), transparent 70%);
+    animation: orb-2 9s ease-in-out infinite alternate;
+  }
+  .aurora-orb-3 {
+    width: 200px; height: 200px;
+    bottom: -20%; left: 40%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 12%, transparent), transparent 70%);
+    animation: orb-3 11s ease-in-out infinite alternate;
+  }
+  @keyframes orb-1 { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(40px,20px) scale(1.2); } }
+  @keyframes orb-2 { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(-30px,30px) scale(1.15); } }
+  @keyframes orb-3 { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(20px,-25px) scale(1.1); } }
+
+  .aurora-mouse {
+    position: absolute;
+    width: 350px; height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 18%, transparent), color-mix(in srgb, var(--color-border) 8%, transparent) 40%, transparent 70%);
+    filter: blur(50px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    transform: translate(calc(var(--mx, 0px) - 175px), calc(var(--my, 0px) - 175px));
+    will-change: transform;
+    z-index: 1;
+  }
+
+  .glow-text {
+    background: linear-gradient(135deg, var(--color-foreground), var(--color-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 25px color-mix(in srgb, var(--color-accent) 25%, transparent));
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 8%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-accent) 15%, transparent);
+  }
+
+  /* Section title */
+  .section-title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .section-title::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--color-accent) 20%, transparent), transparent);
+  }
+
+  /* Grid */
+  .products-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  /* Card */
+  .product-card {
+    position: relative;
+    display: block;
+    border-radius: 0.875rem;
+    background: color-mix(in srgb, var(--color-foreground) 3%, var(--color-background));
+    border: 1px solid color-mix(in srgb, var(--color-accent) 12%, transparent);
+    text-decoration: none;
+    color: var(--color-foreground);
+    overflow: hidden;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .product-card:hover {
+    transform: translateY(-2px);
+    border-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+    box-shadow: 0 8px 28px color-mix(in srgb, var(--color-accent) 12%, transparent);
+  }
+
+  .card-aurora {
+    position: absolute;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, color-mix(in srgb, var(--color-accent) 20%, transparent), transparent 70%);
+    filter: blur(35px);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    transform: translate(calc(var(--mx, 0px) - 100px), calc(var(--my, 0px) - 100px));
+    will-change: transform;
+    z-index: 0;
+  }
+
+  .card-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.9rem 1.1rem;
+  }
+
+  .card-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .card-body {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .card-name-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .card-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: color 0.2s ease;
+  }
+
+  .product-card:hover .card-name {
+    color: var(--color-accent);
+  }
+
+  .live-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.1rem 0.45rem;
+    border-radius: 999px;
+    color: var(--color-accent);
+    background: color-mix(in srgb, var(--color-accent) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--color-accent) 20%, transparent);
+    flex-shrink: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .card-desc {
+    font-size: 0.82rem;
+    opacity: 0.6;
+    line-height: 1.45;
+  }
+
+  .card-arrow {
+    flex-shrink: 0;
+    font-size: 1rem;
+    opacity: 0.3;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .product-card:hover .card-arrow {
+    opacity: 0.8;
+    transform: translateX(3px);
+  }
+</style>
